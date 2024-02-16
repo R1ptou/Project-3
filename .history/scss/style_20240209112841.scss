@@ -1,0 +1,91 @@
+/****** General ***********/
+
+:root {
+    --primary-color: #9356DC;
+    --secondary-color: #FF79DA;
+    --tertiary-color: #99E2D0;
+}
+
+body {
+margin: 0;
+padding: 0;
+color: #000;
+}
+
+/****** Header ***********/
+
+/****** Logo ***********/
+
+/****** Search bar ***********/
+
+.search-bar {
+    display: flex;
+}
+
+.icon-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0; 
+
+}
+
+.input-search {
+    display: flex;
+    border-width: 0;
+    border-style: none;  
+    padding: 0 24px;  
+    font-weight: bold;
+    font-size: 18px;
+}
+.input-search:focus {
+    outline: none;
+}
+
+/****** Headline ***********/
+
+.healine {
+    font-family: 'Shrikhand', sans-serif;
+}
+
+
+/****** Logo ***********/
+
+/****** How it works ***********/
+
+.no-icon {
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+
+/****** Starters ***********/
+
+
+/****** Mains ***********/
+
+
+/****** Deserts ***********/
+
+
+/****** Button ***********/
+
+.btn {
+    background-color: var(--primary-color);
+}
+
+/****** Label ***********/
+
+
+/****** Icon ***********/
+
+
+/****** Footer ***********/
+
