@@ -1,0 +1,23 @@
+.numbered {
+    list-style-type: none;
+    counter-reset: section;
+}
+
+.list-group {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+

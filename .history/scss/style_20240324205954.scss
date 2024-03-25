@@ -1,0 +1,268 @@
+/****** General ***********/
+
+@import "variables";
+@import "base";
+@import "list-group";
+@import "card";
+@import "button";
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+
+/****** Nav ***********/
+
+/****** Logo ***********/
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+/****** Search bar ***********/
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    background-color: $septenary-color;
+}
+
+.icon-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0; 
+}
+
+.input-search {
+    display: flex;
+    border-width: 0;
+    border-style: none;  
+    width: 100%;
+    padding: 0;  
+    font-weight: bold;
+    font-size: 18px;
+    background-color: $septenary-color;
+    caret-color: $tertiary-color;
+}
+.input-search:focus {
+    outline: none;
+}
+
+/****** Headline ***********/
+.headline {
+    display: flex;
+    justify-content: center;
+}
+
+/****** How it works ***********/
+
+ol {
+    counter-reset: section;
+}
+
+li::before {
+    counter-increment: section;
+}
+
+.numbered {
+    clear: both;
+    list-style: none;
+    padding-left: 2%;
+  }
+
+.numbered li {
+    margin: 0;
+    padding-top: 0;
+    display: block;
+    position: relative;
+    counter-increment: inst;
+}
+
+.numbered li::before {
+    content: counter(inst);
+    position: absolute;
+    margin:0 0;
+    background: $primary-color;
+    border-radius: 50%;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    flex-shrink: 0; 
+}
+.icon-pic {
+    display: relative;
+    background: none;
+    color: grey;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    flex-shrink: 0; 
+}
+
+.icon-pic:hover {
+    color: $primary-color;
+}
+
+.menu-item {
+	background: white;
+	border-radius: 16px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+	display: flex;
+
+	.menu-item__price {
+		display: flex;
+		align-items: center;
+		padding: 20px;
+	}
+
+	&:hover { 
+		.menu-item__checkmark {
+			width: 75px;
+		}
+		.menu-item__checkmark-icon {
+			-webkit-transform: rotate(0deg);
+			transform: rotate(0deg);
+		}
+	}
+
+	.menu-item__body {
+		width: 100%;
+		padding: 15px; 
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		.menu-item__content, .menu-item__heading {
+			margin: 0;
+			font-size: 15px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		} 
+
+		.menu-item__heading{
+			font-size: 17px;
+		}
+	}
+
+	.menu-item__checkmark {
+		width: 0;
+		background: $primary-color;
+		transition: width 1s;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.menu-item__checkmark-icon {
+		
+		transition: transform 1s;
+		color: white;
+	}
+}
+
+
+/****** Restaurants ***********/
+
+.heart {
+    position: relative; 
+    display:inline-block;
+    height: 24px;
+    width: 24px;
+    top: 10px;
+    right: 15px;
+}
+
+.heart-icon {
+    position: absolute;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    color: $primary-color;
+}
+
+.heart-empty {
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+.heart-full {
+    transition: opacity 1s;
+    opacity: 0;
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heart:hover .heart-full {
+    opacity: 1;
+}
+
+.heart:hover .heart-empty {
+    opacity: 0;
+}
+
+/****** Starters ***********/
+
+
+/****** Mains ***********/
+
+
+/****** Deserts ***********/
+
+
+/****** Button ***********/
+
+.btn {
+    background-color: $primary-color;
+}
+
+/****** Label ***********/
+
+
+/****** Icon ***********/
+
+
+/****** Footer ***********/
+
+.footer {
+    background-color: $octonary-color;
+    color: #fff;
+    padding: 15px 25px;
+}
+
+.footer-logo {
+    color: #fff;
+    font-family: $primary-serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer-ico {
+    width: 30px;
+}
+
+.ico-resize {
+    font-size: 13px;
+}

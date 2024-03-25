@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 25px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 1px 3px 6px 0px rgba(0, 0, 255, .2);
+    font: 0.9rem "Roboto", sans-serif;
+    color: #000;
+}
+
+/****** Restaurants ***********/
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.card-rest {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(#F6F6F6);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 4px solid #fff;
+}
+
+.card-img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-content {
+    padding: 10px 20px;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.card-subtitle {
+    margin: 5px 0;
+}
+
+

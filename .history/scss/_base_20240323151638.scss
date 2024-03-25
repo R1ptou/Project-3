@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-family: $primary-sans-serif;
+    }
+
+::selection {
+    color: #000;
+    background: $tertiary-color;
+    }
+    
+a {
+    text-decoration: none;
+    }
+
+a, a:visited {
+    color: inherit;
+    }
+
+a:hover, a:focus {
+    color: $tertiary-color;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    }
+
+*:focus {
+    outline: $tertiary-color solid 2px;
+}
+
+*:visited {}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+a[title]:hover::after {
+    content: attr(title);
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    color: $tertiary-color;
+    border: solid 1px;
+    padding: 5px;
+    font-family: $primary-sans-serif;
+    visibility: visible;
+}
+
+a[title]:after {
+    content: attr(title);
+    transition: all 0.1s ease 0.5s;
+    color: $tertiary-color;
+    border: solid 1px;
+    padding: 5px;
+    font-family: $primary-sans-serif;
+    font-size: 50%;
+    opacity: 0;
+    visibility: hidden;
+}

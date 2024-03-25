@@ -1,0 +1,22 @@
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    padding: 16px 25px;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 1px 3px 6px 0px rgba(0, 0, 255, .2);
+    font: 0.9rem "Roboto", sans-serif;
+    color: #000;
+}
+
+.card-img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 15px;
+}

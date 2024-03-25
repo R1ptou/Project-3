@@ -1,0 +1,19 @@
+.button-search{
+    padding: 16px 25px;
+    color: #fff;
+    font-weight: bold;
+    background: $gradient;
+    border-radius: 25px;
+    border: none;
+    justify-content: center;
+}
+
+.button-search:hover, 
+.button-search:focus {
+
+
+    background-color: $gradient-hover;
+    border-radius: 25px;
+    border: none;
+    transition: background-image 0.5s linear;
+}

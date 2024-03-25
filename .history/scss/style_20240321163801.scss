@@ -1,0 +1,152 @@
+/****** General ***********/
+@import "base";
+@import "variables";
+@import "list-group";
+@import "card";
+@import "button";
+
+
+
+
+/****** Header ***********/
+
+/****** Logo ***********/
+
+/****** Search bar ***********/
+
+.search-bar {
+    display: flex;
+    background-color: #EAEAEA;
+}
+
+.icon-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0; 
+
+}
+
+.input-search {
+    display: flex;
+    border-width: 0;
+    border-style: none;  
+    padding: 0 24px;  
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #EAEAEA;
+}
+.input-search:focus {
+    outline: none;
+}
+
+/****** Headline ***********/
+
+.headline {
+    font-family: "Shrikhand", sans-serif;
+}
+
+
+/****** Submit button ***********/
+
+
+
+/****** How it works ***********/
+
+.icon-pic {
+    display: inline-flex;
+    background: none;
+    color: grey;
+    width: 20px;
+    height: 20px;
+    padding: 15px;
+    flex-shrink: 0; 
+}
+
+.icon-pic:hover {
+    color: var(--primary-color);
+}
+
+.icon-no {
+    position: absolute;
+
+    background: var(--primary-color);
+    border-radius: 50%;
+    border: none;
+    font: 0.9rem "Roboto", sans-serif;
+    color: #fff;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    flex-shrink: 0; 
+}
+
+/****** Restaurants ***********/
+
+.heart {
+    position: relative; 
+    display:inline-block;
+    height: 24px;
+    width: 24px;
+}
+
+.heart-icon {
+    position: absolute;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    color: var(--primary-color);
+}
+
+.heart-empty {
+    transition: opacity 1s;
+    opacity: 1s;
+}
+
+.heart-full {
+    transition: opacity 1s;
+    opacity: 1s;
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heart:hover .heart-full {
+    opacity: 1s;
+}
+
+.heart:hover .heart-empty {
+    opacity: 0;
+}
+
+/****** Starters ***********/
+
+
+/****** Mains ***********/
+
+
+/****** Deserts ***********/
+
+
+/****** Button ***********/
+
+.btn {
+    background-color: var(--primary-color);
+}
+
+/****** Label ***********/
+
+
+/****** Icon ***********/
+
+
+/****** Footer ***********/
+
+.footer {
+    background-color: var(--quinary-color);
+}
+
