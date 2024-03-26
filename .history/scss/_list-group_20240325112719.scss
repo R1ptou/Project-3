@@ -1,0 +1,46 @@
+.list-group {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	counter-reset: my-awesome-counter;
+	
+	// Element pattern "BLOCK-NAME__ELEMENT-NAME"
+	.list-group__item {
+		margin-left: 15px; // offset number margin
+		padding: 20px 20px 20px 0;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		box-shadow: 1px 5px 20px;
+		counter-increment: my-awesome-counter;
+		
+		&:before {
+			content: counter(my-awesome-counter); // custom counter
+			height: 30px;
+			width: 30px;
+			background-color: blue;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			margin-left: -15px; // inset number
+		}
+    }
+
+	// Element
+	.list-group__number {
+		background-color: blue;
+		height: 25px;
+		width: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		color: white;
+		margin-left: -10px
+	}
+ }
+

@@ -1,0 +1,48 @@
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 25px;
+    //gap: 100px;
+}
+
+.card-group .card {
+    min-width: 200px;
+    flex: 1 0 0;
+}
+
+/****** Restaurants ***********/
+
+.card {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(#F6F6F6);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-img {
+    object-fit: cover;
+    width: 100%;
+    height: 380px;
+}
+
+.card-content {
+    padding: 10px 20px;
+    flex-grow: 1;
+}
+
+.card-title {
+    margin: 0;
+}
+
+.card-subtitle {
+    margin: 5px 0;
+}
+
+.card-row {
+    display: flex;
+}
+
+

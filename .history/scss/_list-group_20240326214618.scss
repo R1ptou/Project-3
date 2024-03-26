@@ -1,0 +1,52 @@
+.list-group {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	counter-reset: my-counter;
+	
+	// Element pattern "BLOCK-NAME__ELEMENT-NAME"
+	.list-group__item {
+		margin-left: 15px; // offset number margin
+		padding: 20px 20px 20px 0;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		box-shadow: 1px 5px 20px;
+		counter-increment: my-counter;
+        flex-grow: 1;
+		
+		&:before {
+			content: counter(my-counter); // custom counter
+			height: 30px;
+			width: 30px;
+			background-color: $primary-color;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #fff;
+			margin-left: -15px; // inset number
+		}
+    }
+}
+
+.icon-pic {
+    display: relative;
+    background: none;
+    color: $quinary-color;
+
+
+}
+
+.icon-pic:hover {
+    color: $primary-color;
+}
+
+@media screen and (min-width: 768px) {
+    .list-group {
+        flex-direction: row;
+    }
+}
+
