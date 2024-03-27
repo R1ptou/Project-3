@@ -1,0 +1,55 @@
+/****** Footer ***********/
+
+.footer {
+    background-color: $octonary-color;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.footer-logo {
+    color: #fff;
+    font-family: $primary-serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+.footer-logo:focus {
+    outline: none;
+}
+
+.footer a:hover {
+    color: $tertiary-color;
+}
+
+.footer-ico {
+    width: 30px;
+}
+
+.ico-resize {
+    font-size: 13px;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.li:focus {
+    outline: none;                      
+}
+
+@media screen and (min-width: 768px) {
+    .list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .footer .row {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: end;
+        gap: 50px;
+        align-items: center;
+    }
+}

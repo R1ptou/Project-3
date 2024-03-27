@@ -1,0 +1,44 @@
+/****** Footer ***********/
+
+.footer {
+    background-color: $octonary-color;
+    color: #fff;
+    padding: 15px 25px;
+}
+
+.footer-logo {
+    color: #fff;
+    font-family: $primary-serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+.footer a:hover {
+    color: $tertiary-color;
+}
+
+.footer-ico {
+    width: 30px;
+}
+
+.ico-resize {
+    font-size: 13px;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .list {
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer .row {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+    }
+}

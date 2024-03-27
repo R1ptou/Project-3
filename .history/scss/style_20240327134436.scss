@@ -1,0 +1,182 @@
+/****** General ***********/
+
+@import "variables";
+@import "base";
+@import "footer";
+@import "loader";
+@import "list-group";
+@import "card";
+@import "button";
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-dark {
+    background-color: $senary-color;
+}
+
+.section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/****** Nav ***********/
+.navbar {
+    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: .5);
+    position: relative;
+    padding: 15px 0;
+}
+
+.back-link {
+    position: absolute;
+    left: 20px;
+    font-weight: 700;
+}
+
+/****** Logo ***********/
+
+.title {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    font-family: $primary-serif;
+}
+
+.heart {
+    top: 0;
+    right: 0;
+}
+
+.border-top {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.header-image {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: -50px;
+}
+    
+/****** Search bar ***********/
+
+.search-bar {
+    background-color: $septenary-color;
+}
+
+.icon-search {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0; 
+}
+
+.input-search {
+    border-width: 0;
+    border-style: none;  
+    width: 159px;
+    padding: 0;  
+    font-weight: bold;
+    font-size: 18px;
+    background-color: $septenary-color;
+    caret-color: $tertiary-color;
+}
+.input-search:focus {
+    outline: none;
+}
+
+/****** Headline ***********/
+.headline {
+    margin-top: 0;
+}
+
+.sub-headline {
+    font-weight: 300;
+}
+
+/****** How it works ***********/
+
+
+
+/****** Restaurants ***********/
+
+.badge {
+    position: absolute;
+    height: 1.8rem;
+    width: 5rem;
+    text-align: center;
+    line-height: 1.8rem;
+    color: $quaternary-color;
+    background: $tertiary-color;
+    top: 15px;
+    right: 20px;
+
+}
+
+.heart {
+    position: relative; 
+    display:inline-block;
+    height: 24px;
+    width: 24px;
+    top: 10px;
+    right: 15px;
+}
+
+.heart-icon {
+    position: absolute;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    color: $primary-color;
+    font-size: 24px;
+}
+
+.heart-empty {
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.heart-full {
+    transition: opacity .5s;
+    opacity: 0;
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.heart:hover .heart-full {
+    opacity: 1;
+}
+
+.heart:hover .heart-empty {
+    opacity: 0;
+}
+
+/****** Starters ***********/
+
+
+/****** Mains ***********/
+
+
+/****** Deserts ***********/
+
+
+/****** Label ***********/
+
+
+/****** Icon ***********/
+
+

@@ -37,37 +37,11 @@ html {
   scroll-behavior: smooth;
 }
 
-a[title]:hover::after {
-  opacity: 1;
-  transition: all 0.1s ease 0.3s;
-  visibility: visible;
-}
-
-a[title]:after {
-  content: attr(title);
-  color: #99E2D0;
-  position: absolute;
-  top: 10px;
-  left: 105%;
-  z-index: 100;
-  white-space: nowrap;
-  border: solid 1px;
-  padding: 5px;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.7rem;
-  opacity: 0;
-  visibility: hidden;
-}
-
-[title] {
-  position: relative;
-}
-
 /****** Footer ***********/
 .footer {
   background-color: #353535;
   color: #fff;
-  padding: 15px 25px;
+  padding: 15px 0;
 }
 
 .footer-logo {
@@ -75,6 +49,10 @@ a[title]:after {
   font-family: "Shrikhand", serif;
   font-size: 25px;
   margin: 0;
+}
+
+.footer-logo:focus {
+  outline: none;
 }
 
 .footer a:hover {
@@ -89,10 +67,25 @@ a[title]:after {
   font-size: 13px;
 }
 
-.footer li {
+.list {
   list-style: none;
+  padding-left: 0;
 }
 
+@media screen and (min-width: 768px) {
+  .list {
+    display: flex;
+    gap: 40px;
+  }
+  .footer .row {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    gap: 50px;
+    align-items: center;
+  }
+}
 .menu--fade {
   animation-name: menu-fade;
   animation-duration: 3s;
@@ -209,7 +202,7 @@ a[title]:after {
   display: flex;
   align-items: center;
   gap: 20px;
-  box-shadow: 1px 5px 20px;
+  box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   counter-increment: my-counter;
   flex-grow: 1;
@@ -237,6 +230,10 @@ a[title]:after {
   color: #9356DC;
 }
 
+.active-icon {
+  color: #9356DC;
+}
+
 .list-group__title {
   font-weight: 700;
 }
@@ -249,11 +246,11 @@ a[title]:after {
 .card-group {
   display: flex;
   flex-wrap: wrap;
-  padding: 16px 25px;
+  gap: 30px;
 }
 
 .card-group .card {
-  min-width: 200px;
+  min-width: 368px;
   flex: 1 0 0;
 }
 
@@ -266,11 +263,13 @@ a[title]:after {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   overflow: hidden;
+  position: relative;
 }
 
 .card-img {
   object-fit: cover;
   width: 100%;
+  height: 200px;
 }
 
 .card-content {
@@ -310,6 +309,25 @@ a[title]:after {
   box-shadow: 0 8px 15px 0 rgba(126, 126, 126, 0.8);
 }
 
+.button-order {
+  padding: 16px 75px;
+  color: #fff;
+  font-weight: bold;
+  background: linear-gradient(-10deg, #9356DC, #FF79DA);
+  border-radius: 25px;
+  border: none;
+  justify-content: center;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.button-order:hover,
+.button-order:focus {
+  filter: brightness(115%);
+  box-shadow: 0 8px 15px 0 rgba(126, 126, 126, 0.8);
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -328,17 +346,139 @@ a[title]:after {
 .section {
   padding-top: 40px;
   padding-bottom: 40px;
+  position: relative;
 }
 
 /****** Nav ***********/
 .navbar {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   position: relative;
+  padding: 15px 0;
 }
 
-/****** Logo ***********/
-.logo {
-  padding: 15px 0;
+.back-link {
+  position: absolute;
+  left: 20px;
+  line-height: 2;
+}
+
+.back-link:focus {
+  outline: none;
+}
+
+/****** restaurant-1 ***********/
+.title {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 0;
+  font-family: "Shrikhand", serif;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    text-align: center;
+  }
+}
+.sub-title {
+  text-transform: uppercase;
+  font-weight: 100px;
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+}
+
+.sub-title:before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 3px;
+  bottom: 0;
+  left: 9px;
+  width: 45px;
+  background-color: #99E2D0;
+}
+
+.menu-item {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu-item__price {
+  display: flex;
+  align-items: end;
+  padding: 15px 20px;
+}
+
+:hover .menu-item__checkmark {
+  width: 75px;
+}
+:hover .menu-item__checkmark-icon {
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+}
+
+.menu-item__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px;
+  overflow: hidden;
+  gap: 5px;
+}
+
+.menu-item__heading {
+  margin: 0;
+  font-size: 1.1rem;
+  overflow: hidden;
+}
+
+.menu-item__content {
+  margin: 0;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu-item__checkmark {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  transition: width 0.5s;
+}
+
+.menu-item__checkmark-icon {
+  transition: transform 0.5s;
+  transform: rotate(360deg);
+  color: #fff;
+}
+
+.heart {
+  top: 0;
+  right: 0;
+}
+
+.border-top {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.header-image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: -50px;
 }
 
 /****** Search bar ***********/
@@ -388,9 +528,9 @@ a[title]:after {
   text-align: center;
   line-height: 1.8rem;
   color: #008766;
-  margin-top: 15px;
-  margin-left: 180px;
   background: #99E2D0;
+  top: 15px;
+  right: 20px;
 }
 
 .heart {
