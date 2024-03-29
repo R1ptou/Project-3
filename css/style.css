@@ -398,6 +398,7 @@ html {
   background-color: #99E2D0;
 }
 
+/****** Menu page ***********/
 .menu-item {
   display: flex;
   background: #fff;
@@ -450,6 +451,7 @@ html {
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   background: #99E2D0;
   right: 0;
   top: 0;
