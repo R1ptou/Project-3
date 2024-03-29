@@ -1,0 +1,60 @@
+.list-group {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  counter-reset: my-counter;
+
+  .list-group__item {
+    margin-left: 15px; // offset number margin
+    padding: 20px 20px 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 1px 5px 20px rgba($color: #000000, $alpha: 0.3);
+    border-radius: 20px;
+    counter-increment: my-counter;
+    flex-grow: 1;
+
+    &:before {
+      content: counter(my-counter); // custom counter
+      height: 30px;
+      width: 30px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      margin-left: -15px; // inset number
+    }
+  }
+}
+
+.list-group__icon {
+  background: none;
+  color: $quinary-color;
+  font-size: 20px;
+}
+
+.list-group__icon:hover {
+  color: $primary-color;
+}
+
+.active-icon {
+  color: $primary-color;
+}
+
+.list-group__title {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .list-group {
+    flex-direction: row;
+    .list-group__item {
+      width: 100%;
+    }
+  }
+}

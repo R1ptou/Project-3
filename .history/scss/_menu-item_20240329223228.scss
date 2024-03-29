@@ -1,0 +1,96 @@
+/****** Menu page ***********/
+
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-item {
+    display: flex;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+
+    .menu-item__price {
+    display: flex;
+    align-items: end;
+    padding: 15px 20px;
+    }
+
+    &:hover {
+    .menu-item__checkmark {
+        width: 75px;
+    }
+    .menu-item__checkmark-icon {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    }
+
+    .menu-item__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    overflow: hidden;
+    gap: 5px;
+    }
+
+    .menu-item__heading {
+    margin: 0;
+    font-size: 1.1rem;
+    overflow: hidden;
+    }
+
+    .menu-item__content {
+    margin: 0;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+    .menu-item__checkmark {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: $tertiary-color;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.5s;
+    }
+
+    .menu-item__checkmark-icon {
+    transition: transform 0.5s;
+    transform: rotate(360deg);
+    color: #fff;
+    }
+}
+@media screen and (min-width:768px) {
+    .media-resize{
+        max-width: 700px;
+        margin: auto;
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width:767px) {
+    .menu-item__checkmark .menu-item__checkmark-icon {
+        display: none;
+        list-style: none;
+    :hover {
+        display: none;
+    }
+    background-color: transparent;
+    }
+}
