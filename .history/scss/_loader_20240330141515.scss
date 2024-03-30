@@ -35,8 +35,8 @@
 /****** Homepage fade-in ***********/
 
 .list--fade {
-	animation-name: list-fade;
-	animation-duration: 5s;
+	animation-name: menu-fade;
+	animation-duration: 3s;
 	animation-iteration-count: 1;
 	animation-fill-mode: forwards;
 	opacity: 0;
@@ -46,24 +46,22 @@
 	animation-delay: 0.1s;
 }
 .list--fade-2 {
-	animation-delay: 0.225s;
+	animation-delay: 0.2s;
 }
 .list--fade-3 {
-	animation-delay: 0.375s;
+	animation-delay: 0.3s;
 }
 
 @keyframes list-fade {
   0% {
     opacity: 0;
-		transform: translate(500px, 0);
+		transform: translate(200px, 0);
   }
   100% {
     opacity: 1;
 		transform: translate(0);
   }
 }
-
-/****** Homepage loader ***********/
 
 .loader {
 	background-color: $senary-color;
