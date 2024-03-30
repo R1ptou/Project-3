@@ -107,6 +107,10 @@ html {
   animation-delay: 0.3s;
 }
 
+.menu--fade-4 {
+  animation-delay: 0.4s;
+}
+
 @keyframes menu-fade {
   0% {
     opacity: 0;
