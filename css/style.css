@@ -326,17 +326,6 @@ html {
     width: 100%;
   }
 }
-@media screen and (max-width: 767px) {
-  .menu-item__checkmark .menu-item__checkmark-icon {
-    display: none;
-    list-style: none;
-    background: #fff;
-    transition: none;
-  }
-  .menu-item__checkmark .menu-item__checkmark-icon :hover {
-    display: none;
-  }
-}
 .card-group {
   display: flex;
   flex-wrap: wrap;
